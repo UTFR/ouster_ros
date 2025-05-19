@@ -2,11 +2,12 @@ ouster/os_driver:
   ros__parameters:
     # sensor_hostname[required]: hostname or IP address of the sensor (IP4 or
     # IP6).
-    sensor_hostname: "os-122216000955.local"
+    sensor_hostname: "os-122416000388.local/"
     # udp_dest[optional]: hostname or multicast group IP where the sensor will
     # send UDP data packets.
     udp_dest: ""
-    # mtp_dest[optional]: hostname IP address for receiving data packets via
+    # mtp_dest[optional]:hostname IP address for receiving data packets via
+
     # multicast, by default it is INADDR_ANY, so packets will be received on
     # first available network interface.
     mtp_dest: ""
@@ -92,4 +93,18 @@ ouster/os_driver:
     # azimuth_window_end[optional]: values range [0, 360000] millidegrees
     azimuth_window_end: 260000
     # persist_config[optional]: request the sensor to persist settings
-    persist_config: false
+    persist_config: true
+
+    # enum MultipurposeIOMode {
+    # MULTIPURPOSE_OFF = 1,  ///< Multipurpose IO is turned off (default)
+    # MULTIPURPOSE_INPUT_NMEA_UART = 2,
+    # MULTIPURPOSE_OUTPUT_FROM_INTERNAL_OSC = 3,
+    # MULTIPURPOSE_OUTPUT_FROM_SYNC_PULSE_IN = 4,
+    # MULTIPURPOSE_OUTPUT_FROM_PTP_1588 = 5,
+    # MULTIPURPOSE_OUTPUT_FROM_ENCODER_ANGLE = 6
+    # }
+    multipurpose_io_mode: 6
+
+    # Angle in degrees that sensor traverses between each SYNC_PULSE_OUT
+    # pulse. See senor docs for more details.
+    sync_pulse_out_angle: 360
