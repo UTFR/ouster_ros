@@ -50,6 +50,9 @@ def generate_launch_description():
         namespace=ouster_ns,
         parameters=[params_file],
         output='screen',
+        respawn=True,
+        respawn_delay=2.0,
+        # prefix=['taskset', '-c', '0', 'nice', '-n', '-5'],
     )
 
     sensor_configure_event = EmitEvent(
