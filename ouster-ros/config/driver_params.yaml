@@ -2,7 +2,7 @@ ouster/os_driver:
   ros__parameters:
     # sensor_hostname[required]: hostname or IP address of the sensor (IP4 or
     # IP6).
-    sensor_hostname: "os-122416000388.local/"
+    sensor_hostname: "os-122416000388.local"
     # udp_dest[optional]: hostname or multicast group IP where the sensor will
     # send UDP data packets.
     udp_dest: ""
@@ -86,7 +86,7 @@ ouster/os_driver:
     # - ouster_ros/os_point.h
     # - ouster_ros/sensor_point_types.h
     # - ouster_ros/common_point_types.h.
-    point_type: xyz
+    point_type: xyzi
     # azimuth window start[optional]: values range [0, 360000] millidegrees
     azimuth_window_start: 115000
     # azimuth_window_end[optional]: values range [0, 360000] millidegrees
